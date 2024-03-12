@@ -1,7 +1,5 @@
 # Current State
 
-### Current State
-
 ### Chat Assignment
 
 - Trigger: A new chat is initiated by a user in a specific

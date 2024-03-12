@@ -36,6 +36,10 @@ If the input and output languages are specified:
 
 - **Feedback:** Record user feedback (rating and comments) alongside the related query and response.
 
+![Untitled](/img/image2.png)
+![Untitled](/img/image1.png)
+![Untitled](/img/image3.png)
+
 **API Endpoints**
 
 - **Medical Query API Endpoint:**
