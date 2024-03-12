@@ -71,20 +71,21 @@ const config = {
           alt: "Noora Health",
           src: "img/logo.svg",
         },
-        items: [
+        items: 
+        [
           {
             type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            sidebarId: "intentSidebar",
             position: "left",
-            label: "Docs",
+            label: "Intent Recognition",
           },
-          // { to: "/blog", label: "Blog", position: "left" },
-          // {
-          //   href: "https://github.com/shreyas314159/mse-assistant-docs",
-          //   label: "GitHub",
-          //   position: "right",
-          // },
-        ],
+          {
+            type: "docSidebar",
+            sidebarId: "mseSidebar",
+            position: "left",
+            label: "MSE Assistant",
+          },
+        ], 
       },
 
       prism: {
