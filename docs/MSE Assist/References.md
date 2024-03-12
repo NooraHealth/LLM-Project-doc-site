@@ -1,10 +1,10 @@
 # References
 
-[Frequently asked questions](References%2051064cbfbe2d42d192c31c2dfffae699/Frequently%20asked%20questions%203cde81c63d95470cba782690708398b8.md)
+[Frequently asked questions](/docs/MSE%20Assist/References/Frequently%20asked%20questions.md)
 
 Details
 
-[Bibliography](References%2051064cbfbe2d42d192c31c2dfffae699/Bibliography%2059b7fea95c03493585f82fd1da87ab2c.md)
+[Bibliography](/docs/MSE%20Assist/References/Bibliography.md)
 
 Details
 
