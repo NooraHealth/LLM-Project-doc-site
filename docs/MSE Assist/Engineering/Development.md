@@ -7,7 +7,7 @@
 
 Webapp with a backend on the LLM Chat Bot Application
 
-![Untitled](/img/Untitled.png)
+![Untitled](img/Untitled.png)
 
 <!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled.png) -->
 
@@ -55,10 +55,13 @@ quality checks are necessary to ensure the translation accuracy for medical cont
 Dependence on High-Quality Data: The effectiveness of the system heavily relies on the quality of the FAQ bank. Regular updates and expert review are crucial to keep the information accurate and up-to-date.
 
 Example UI for response Generation:
-![Example](/img/Untitled 1.png)
+![Example for response](img/Untitled 1.png)
+
+
+
 <!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%201.png) -->
 
 Example Ui for Feedback collection:
-![Example](/img/Untitled 2.png)
+![Example for feedback](img/Untitled 2.png)
 
 <!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%202.png) -->

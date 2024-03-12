@@ -25,7 +25,7 @@ Reporting guidelines:
 
 <!-- ![Operational%20Procedures%20c712dcf4719b468a825938a54d1284c8/image1.png](Operational%20Procedures%20c712dcf4719b468a825938a54d1284c8/image1.png) -->
 
-![Data version controlling](image1.png)
+![Data version controlling](img/image1.png)
 
 
 MLOps softwares we could use:
