@@ -1,108 +1,78 @@
 # Objective
 
-# Objective
-
 ### Enhancing Query Processing
 
-The goal is to develop a workflow that leverages a Large Language Model (LLM) to translate queries into English and accurately extract medical information from sources like medpalm2 or a validated medical question bank. The workflow entails:
+The goal is to develop a workflow that leverages a Large Language Model (LLM) to translate queries into English and accurately extract medical information from sources like medpalm2 or a validated medical question bank. This workflow includes:
 
 - Generating an embedding from the cleaned Frequently Asked Questions (FAQ) database.
 - Translating the user's query into English by:
-    - Detecting the query's original language and noting it as {language}.
-    - If the query isn't in English, translating the message to English; otherwise, proceeding with the message as is.
+  - Detecting the original language of the query and noting it as `{language}`.
+  - If the query isn't in English, translating it into English; otherwise, processing the original message.
 
 **Retrieving Medical Answers**
 
-- Utilizing RAG (Retrieval-Augmented Generation) to derive a generated answer, displaying the top three retrievals based on the translated query. Should there be no relevant answer, the system will indicate "out of context."
-- Employing Medpalm2 to secure a precise answer to the medical query, then translating this answer back into the initially recorded {language} for user comprehension.
+- Using Retrieval-Augmented Generation (RAG) to provide a generated answer, showcasing the top three retrievals based on the translated query. If no relevant answer is found, the system will display "out of context."
+- Utilizing Medpalm2 to obtain a precise answer to the medical query and translating this answer back into the user's language for clarity.
 
-Translate the answer to the saved {language} field and output the answer.
+The system then translates the answer to the previously noted `{language}` and presents it to the user.
 
 Priority Medium:
 
-If a message’s input and output language is given:
+If the input and output languages are specified:
 
-1) Translate with AI 4 bharat’s transliteration and translation apis.
+1. Utilize AI 4 Bharat's transliteration and translation APIs for conversion.
 
 **Feedback Mechanism**
 
-Interface: Introduce a feedback interface post-answer with thumbs up (👍) or thumbs down (👎) icons and an optional text box for comments.
+- **Interface:** Introduce a feedback mechanism post-answer with options for thumbs up (👍) or thumbs down (👎) and an optional text box for comments.
+- **Process:** Store feedback with the query, its translation, and the response to analyze performance and make improvements.
 
-Process: Collect and store feedback alongside the user's query, its translation, and the response for performance analysis and improvements.
-
-- Implement a feature allowing users to specify their expected answer in a text box when no response is generated or if the provided answer is incorrect.
+  - Include a feature that allows users to specify their expected answer in a textbox when the response is insufficient or incorrect.
 
 **Logging System**
 
-Query Logging: Record the original query, its detected language, and the translated English query. If a response is translated back, log both versions.
+- **Query Logging:** Document the original query, its detected language, and the translated query. Log both the original and translated responses.
+- **Retrieval and Response:** Keep records of the top sources, the summarized answer, and its translation.
 
-Retrieval and Response: Log the top sources, and the summarized and translated answer.
+- **Feedback:** Record user feedback (rating and comments) alongside the related query and response.
 
-Feedback: Document the user's feedback (rating and comments) linked to the query and response.
+**API Endpoints**
 
-![Objective%204bfbb6d47e1140209e7c5daa74a74d8d/image2.png](Objective%204bfbb6d47e1140209e7c5daa74a74d8d/image2.png)
+- **Medical Query API Endpoint:**
 
-Example design of the MVP (WIP):
+  - Endpoint: `/medical_query`
+  - Method: POST
+  - Description: Retrieves the final medical response along with the top sources (excludes Medpalm data).
 
-![Objective%204bfbb6d47e1140209e7c5daa74a74d8d/image1.png](Objective%204bfbb6d47e1140209e7c5daa74a74d8d/image1.png)
+    ```jsx
+    {
+      "query": "User's medical query"
+    }
+    ```
 
-![Objective%204bfbb6d47e1140209e7c5daa74a74d8d/image3.png](Objective%204bfbb6d47e1140209e7c5daa74a74d8d/image3.png)
+  - Response Payload:
 
-Medical Query API Endpoint:
+    ```jsx
+    {
+      "final_answer": "The translated final answer",
+      "top_sources": ["Top source 1", "Top source 2", "Top source 3"]
+    }
+    ```
 
-Endpoint: /medical_query
+- **Feedback API Endpoint:**
 
-Method: POST
+  - Endpoint: `/feedback`
+  - Method: POST
+  - Description: Manages user feedback, capturing their rating, comments, and suggestions for the ideal answer.
 
-Description: This endpoint retrieves the final answer to the medical query along with the top sources (not available for Medpalm).
+    ```jsx
+    {
+      "query": "User's original query",
+      "answer": "Translated final answer",
+      "feedback": "👍 or 👎",
+      "comments": "Optional comments",
+      "ideal_answer": "Optional suggestion for the ideal answer"
+    }
+    ```
 
-Request Payload:
-
-```jsx
-{
-    "query": "User's medical query"
-}
-
-```
-
-Response Payload:
-
-```jsx
-{
-
-"final_answer": "The translated final answer",
-
-"top_sources": ["Top source 1", "Top source 2", "Top source 3"]
-
-}
-```
-
-Feedback API Endpoint:
-
-Endpoint: /feedback
-
-Method: POST
-
-Description: This endpoint manages user feedback, allowing them to provide a thumbs up or down, input comments, and suggest an ideal answer.
-
-Request Payload:
-
-json
-
-```jsx
-{
-
-"query": "User's original query",
-
-"answer": "Translated final answer",
-
-"feedback": "👍 or 👎",
-
-"comments": "Optional comments",
-
-"ideal_answer": "Optional suggestion for the ideal answer"
-
-}
-```
-
-Response: HTTP status code indicating success or failure.
+  - Response: Indicates the operation's success or failure with an HTTP status code.

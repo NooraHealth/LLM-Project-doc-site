@@ -23,7 +23,7 @@ Reporting guidelines:
 - Reforms checklist: [https://reforms.cs.princeton.edu/](https://reforms.cs.princeton.edu/)
 - [Data Version Controlling](https://mlops-guide.github.io/MLOps/Data/)
 
-![Operational%20Procedures%20c712dcf4719b468a825938a54d1284c8/image1.png](Operational%20Procedures%20c712dcf4719b468a825938a54d1284c8/image1.png)
+<!-- ![Operational%20Procedures%20c712dcf4719b468a825938a54d1284c8/image1.png](Operational%20Procedures%20c712dcf4719b468a825938a54d1284c8/image1.png) -->
 
 MLOps softwares we could use:
 

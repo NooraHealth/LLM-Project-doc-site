@@ -1,13 +1,13 @@
 # Development
 
 - Architecture Overview (Technical Stack, Data Flow, APIs): Backend Processing and API Integration,
-Handling and Resolution of Medical Queries
+  Handling and Resolution of Medical Queries
 - Translation and Localisation Support
 - Performance Optimisation and Scalability
 
 Webapp with a backend on the LLM Chat Bot Application
 
-![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled.png)
+<!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled.png) -->
 
 ### System Components:
 
@@ -77,8 +77,8 @@ up-to-date.
 
 Example UI for response Generation:
 
-![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%201.png)
+<!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%201.png) -->
 
 Example Ui for Feedback collection:
 
-![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%202.png)
+<!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%202.png) -->

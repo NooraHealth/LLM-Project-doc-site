@@ -71,8 +71,7 @@ const config = {
           alt: "Noora Health",
           src: "img/logo.svg",
         },
-        items: 
-        [
+        items: [
           {
             type: "docSidebar",
             sidebarId: "intentSidebar",
@@ -85,7 +84,7 @@ const config = {
             position: "left",
             label: "MSE Assistant",
           },
-        ], 
+        ],
       },
 
       prism: {
