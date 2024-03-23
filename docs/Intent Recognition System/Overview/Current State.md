@@ -1,13 +1,12 @@
 # Current State
 
-The journey of a health query can be broadly classified into two main buckets -- chat assignment, and chat categorisation.
+There are three key steps towards processing a health query- chat assignment, and chat categorisation, and ticket creation.
 
 ### Chat Assignment
 
 #### Key Actions
 
 - A new chat is initiated by the user in a specific language.
-- A ticket is manually created by the MSE on the Freshdesk platform
 - The TURN platform automatically assigns the chat to an MSE based on round-robin approach.
 
 #### Tools/Systems used
@@ -19,26 +18,24 @@ Turn’s automation stack with user profile’s language field.
 
 - MSE reviews the assigned chats in sequence.
 - MSE reads through each message one-by-one and categorises it according to predefined labels such as greetings, feedback, acknowledgement, spam, others etc.
-- 
 
-- Action: The MSE reviews the assigned chats in sequence. For each
-chat, the MSE reads the message and categorizes it according to
-predefined labels such as greetings, feedback, acknowledgement,
-language request, spam, and medical questions.
-- Decision Making: This step involves critical thinking to accurately
-categorize each chat, ensuring that queries are processed
-correctly.
 
-Tools/Systems Used: Turn with labeling capabilities.
+As this process is manual and takes time to manually evaluate each question, it's difficult to ensure that the queries are processed correctly. Apart from that, it takes up a significant bandwidth from the MSEs, as they spend more time sorting through questions than actually evaluating the medical health responses.
 
-### Ticket Creation for Medical
-Queries
 
-- Trigger: Identification of a medical query.
-- Action: The MSE creates a ticket in Freshdesk (or a similar
-ticketing system) specifically for the medical query. This ticket is
-then used to track the query’s resolution process.
-- Tools/Systems Used: Freshdesk or another customer support ticketing
+#### Tools/Systems used
+Turn with labeling capabilities.
+
+### Ticket Creation for Medical Queries
+
+#### Key Actions
+
+- Medical queries are identified as such 
+- MSE logs into the ticketing platform and manually creates the ticket
+- From ticket creation to ticket resolution, everything is tracked on Freshdesk
+
+#### Tools/Systems used
+Freshdesk or another customer support ticketing
 system.
 
 ---
