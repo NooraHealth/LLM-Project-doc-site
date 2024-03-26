@@ -1,6 +1,6 @@
 # Current State
 
-There are three key steps towards processing a health query- chat assignment, and chat categorisation, and ticket creation.
+There are three key steps towards processing a health query: chat assignment, and chat categorisation, and ticket creation.
 
 ### Chat Assignment
 

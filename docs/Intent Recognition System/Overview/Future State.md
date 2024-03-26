@@ -1,7 +1,6 @@
 # Desired State
 
-
-As shown in the previous page, chat assignment, chat categorisation, and ticket creation for medical queries pass through various manual processes that might be subjected to human errors and efficiency gaps. Through the intent recognition system, the aim is to solve for these blockers.
+As shown in the previous page, chat assignment, chat categorisation, and ticket creation for medical queries pass through various manual processes that might be subjected to human errors and efficiency gaps. Through the intent recognition system, the aim is to solve for all these blockers in a systematic fashion.
 
 ### Enhanced Intent Recognition:
 
@@ -28,10 +27,14 @@ After identifying the non-medical intent in-terms of these broad categories, an 
 | Medical questions  | My baby is having high fever  | (assigned a ticket)   |
 |  High Risk Intent | my baby is choking, need immediate help  | Please contact the nearest health facility fior more information (assigned a ticket)  |
 
+> As shown above, some categories such as spam, acknowledgements don't have any expected response. This is intentional, and is meant to ensure the system uses responses in a judicious fashion.
+
 
 ### Ticket Creation
 
-In the future state, we expect a more seamless ticket creation process for medical queries. MSE no longer needs to manually log the query onto the ticketing platform.
+In the future state, we expect a more seamless ticket creation process for medical queries. MSE no longer needs to manually log the query onto the ticketing platform. 
+
+The current process of manual ticket creation for medical messages would be redacted once we evaluate the accuracy of this system.
 
 
 
