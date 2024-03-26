@@ -1,13 +1,12 @@
 # Development
 
+These are the key engineering divisions that we need to bring together for an improvised intent recognition system:
+
 - High Risk Intent Classification
 - Data Processing and Message Classification
 - Integration with Chat and Messaging Platforms
 - Continuous Learning and Model Improvement
-- Architecture Overview (Technical Stack, Data Flow, APIs)
 
-Intent Recognition: Turn stacks/Journey to trigger custom webhook
-hosting the LLM Chat Bot Application that does classification.
 
 ![Untitled](Untitled.png)
 
@@ -15,38 +14,33 @@ hosting the LLM Chat Bot Application that does classification.
 <!-- ![Untitled](../Engineering%20f06030dea04e40cf84573246d73d39f9/Untitled.png) -->
 
 
-
 ### System Components
 
-### Message Reception and
+### Message Reception and Pre-processing
 
-Pre-processing
-
-Ingestion API: Utilize Python’s Fast API framework to create RESTful
-APIs that efficiently handle incoming messages from turn’s webhook (or
-Meta’s cloud business manager.)
+Ingestion API: Utilize Python’s Fast API framework to create RESTful APIs that efficiently handle incoming messages from turn’s webhook (or Meta’s cloud business manager.)
 
 Pre-processing Service: Implement a service to sanitize and
 standardize messages by removing special characters, converting text to
 lowercase, and other necessary pre processing steps to ensure data
 quality for NLP/LLM analysis.
 
-### NLP and
+### NLP and Machine Learning for Intent Classification:
 
-Machine Learning for Intent Classification:
+Intent Recognition: Turn stacks/Journey to trigger custom webhook hosting the LLM Chat Bot Application that does classification.
 
-Method 1: Easy and Fast Dev Time but a bit Expensive:
+
+#### Method 1
+
+Easy and Fast Dev Time but a bit Expensive:
 
 GPT-4 Classification: Leverage GPT-4 for direct message
-classification, bypassing the need for a separate translation layer,
-suitable for straightforward intent recognition tasks.More Dev time but
-cheaper and less accurate:
+classification, bypassing the need for a separate translation layer,suitable for straightforward intent recognition tasks.More Dev time but cheaper and less accurate:
 
-Method 2:  Translation services and NLP Libraries: For multilingual
-support, integrate ai4bharat’s transliteration and translation services
-followed by TensorFlow or PyTorch for machine learning. Use NLP
-libraries like NLTK or spaCy for additional text processing and
-classification into predefined intent categories.
+##### Method 2
+
+Translation services and NLP Libraries: For multilingual
+support, integrate ai4bharat’s transliteration and translation services followed by TensorFlow or PyTorch for machine learning. Use NLP libraries like NLTK or spaCy for additional text processing and classification into predefined intent categories.
 
 Model Training: Employ supervised learning techniques with a
 well-labeled dataset containing diverse examples of user messages mapped
@@ -62,18 +56,13 @@ Function Dispatcher: A crucial system component responsible for
 mapping classified intents to corresponding action handlers, including
 integration with GPT-4 Functions for dynamic response generation.
 
-Handlers: Develop specific handlers for common intents such as
-greetings, feedback, acknowledgments, marking spam, and managing user
-language preferences. Ensure handlers update the user’s status or
-preferences in a unified database for consistent communication.
+Handlers: Develop specific handlers for common intents such as greetings, feedback, acknowledgments, marking spam, and managing user language preferences. Ensure handlers update the user’s status or preferences in a unified database for consistent communication.
 
-Types: Greetings, Acknowledgments ,Spam, Requests to change language,
-Medical Questions
+Types: Greetings, Acknowledgments ,Spam, Requests to change language, Medical Questions
 
 ### Suggested FAQ:
 
-Semantic based gpt4 retrieval to provide user with suggested FAQ and
-its answers while the users wait for a medical response.
+Semantic based gpt4 retrieval to provide user with suggested FAQ and its answers while the users wait for a medical response.
 
 ![Whatsapp response](img/whatsapp.png)
 
