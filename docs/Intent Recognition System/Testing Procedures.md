@@ -1,41 +1,40 @@
-# Testing Procedures
+# Testing Plan
 
-### Protocols for Testers
+The testing of the Intent Recognition System will be conducted in three distinct phases. Each phase is designed to progressively validate the system's accuracy and efficiency in categorizing incoming messages, with an increasing level of automation and integration into the daily operations of Medical Support Executives (MSEs).
 
-- Engage a diverse group of testers, including those fluent in the system’s supported languages and individuals with healthcare knowledge,
-to manually input queries and evaluate the system’s responses for accuracy, relevance, and usefulness.
-- Testers should also assess the user interface’s usability, particularly the effectiveness and accessibility of the feedback
-mechanisms. ### Protocols for Feedback Collection
-- For each query response provided by the MSE Assistant, include a “thumbs up” (satisfied) or “thumbs down” (dissatisfied) option, allowing
-users to quickly express their satisfaction level with the
-response.
-- Alongside the satisfaction indicator, provide an optional input field where users can elaborate on their feedback, offering insights
-into what they found helpful or areas where the response fell short. This input field can capture valuable details on the user’s experience,
-expectations, and specific issues encountered.
+## Test Phase 1: Observation Mode
 
-### Protocols for Iterative Improvement
+**Objective**: Silently evaluate the accuracy of the Intent Recognition System by comparing its categorizations against those made by MSEs without affecting current operations.
 
-### Analysis of Feedback
+### Steps:
 
-- Regularly analyze the feedback, categorizing it based on the type of query, the nature of the feedback (positive or negative), and any
-specific suggestions or issues highlighted by users.
-- Pay particular attention to repeated patterns of dissatisfaction or specific areas where users consistently request improvements.
+1. **Configuration**: Set up the Intent Recognition System to run in observation mode, where it categorizes incoming messages in the background.
+2. **Normal Operation**: Allow MSEs to label incoming messages as per the existing process without awareness of the system's categorizations.
+3. **Data Collection**: Collect data on the labels assigned by MSEs and the categorizations made by the Intent Recognition System for the same messages.
+4. **Analysis**: Compare the system's categorizations against MSE labels to assess accuracy, identify patterns in discrepancies, and adjust the system accordingly.
 
-### System Refinement
+## Test Phase 2: UI Labeling
 
-- Utilize the feedback to make targeted improvements to the MSE Assistant. This could involve enhancing the translation layer for better
-accuracy, updating the medical FAQ bank to address gaps in information, or refining the response generation process for greater relevance and
-clarity.
-- Prioritize updates based on the frequency and severity of the feedback, ensuring that changes are likely to have a significant impact
-on user satisfaction.
+**Objective**: Test the system's integration with the user interface by displaying its categorizations to MSEs, allowing them to correct any inaccuracies.
 
-### Routine Review and Adjustment
+### Steps:
 
-- Establish a process for routine review of the feedback collection and analysis system itself, ensuring that it remains effective in
-capturing and categorizing user insights.
-- Adjust the feedback mechanism as needed to ensure it encourages maximum user participation and captures high-quality, actionable
-feedback. Correctness , consistency. 
+1. **UI Integration**: Modify the TURN platform's UI to display labels assigned by the Intent Recognition System for each chat.
+2. **Human in the Loop**: Instruct MSEs to review the system's categorizations and add or adjust labels if the categorization is found to be incorrect.
+3. **Feedback Loop**: Collect feedback from MSEs on the system's accuracy and the intuitiveness of correcting categorizations.
+4. **System Refinement**: Use MSE feedback and correction patterns to refine the intent recognition algorithms and improve categorization accuracy.
 
-### Protocols for Evaluation and Logging
+## Test Phase 3: Medical vs. Non-Medical Segregation
 
-(to be added)
+**Objective**: Fully integrate the Intent Recognition System into the operational flow, automatically segregating non-medical messages and allowing MSEs to focus on medically relevant queries.
+
+### Steps:
+
+1. **Automatic Segregation**: Configure the Intent Recognition System to automatically assign non-medical messages to a separate bucket, directing only medically relevant questions to MSEs.
+2. **Teletrainer Review**: Assign a team of teletrainers to regularly check the non-medical chat bucket for classification errors, ensuring no medical queries are incorrectly categorized.
+3. **Action Based on Classification**: Enable the Intent Recognition System to respond to or take action on non-medical messages based on their classification (e.g., automated responses for greetings or spam).
+4. **Evaluation and Adjustment**: Monitor the system's performance in segregating messages and the accuracy of automated actions, making necessary adjustments to improve reliability and efficiency.
+
+## Overall Testing Strategy
+
+The phased testing approach allows for a careful evaluation of the Intent Recognition System's performance, starting from a non-intrusive observation mode to a full integration with operational processes. This strategy ensures that adjustments can be made before full deployment, minimizing the impact on MSEs' workload and maintaining the quality of user interactions. Regular feedback loops and data analysis are critical at each phase to refine the system's algorithms and ensure that it meets the operational needs of Noora Health.
