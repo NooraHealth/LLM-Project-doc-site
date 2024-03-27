@@ -25,17 +25,22 @@ const sidebars = {
     ],
 
     "System Design": ["Intent Recognition System/System Design"],
+    // Engineering: [
+    //   "MSE Assist/Engineering/Development",
+    //   "MSE Assist/Engineering/Evaluation",
+    //   "MSE Assist/Engineering/Deployment",
+    // ],
+    Engineering: [
+      "Intent Recognition System/Engineering/Development",
+      "Intent Recognition System/Engineering/Evaluation",
 
-    Engineering: ["Intent Recognition System/Engineering"],
-
-    "Quality Assurance": ["Intent Recognition System/Quality Assurance"],
+      "Intent Recognition System/Engineering/Deployment",
+    ],
 
     "Testing Procedures": ["Intent Recognition System/Testing Procedures"],
-
     "Challenges and Solutions": [
       "Intent Recognition System/Challenges and Solutions",
     ],
-
     References: [
       "Intent Recognition System/References/Bibliography",
       "Intent Recognition System/References/Frequently asked questions",
@@ -50,9 +55,9 @@ const sidebars = {
     ],
     "System Design": ["MSE Assist/System Design", "MSE Assist/Changelog"],
     Engineering: [
-      "MSE Assist/Engineering",
       "MSE Assist/Engineering/Development",
       "MSE Assist/Engineering/Evaluation",
+      "MSE Assist/Engineering/Deployment",
     ],
     "Operational Procedures": ["MSE Assist/Operational Procedures"],
     "Challenges and Solutions": ["MSE Assist/Challenges and Solutions"],

@@ -24,12 +24,10 @@ Advanced Capabilities: Using the Intent recognition + Assignment stack route the
 Retrieval Augmented Generation: Utilize GPT-4 in conjunction with a curated FAQ bank specifically tailored for medical inquiries. This approach will enable the system to provide accurate and relevant responses by leveraging both the generative capabilities of GPT-4 and
 the specific, reliable information contained within the FAQ bank.
 
-Medpalm 2 for Medical Query Generation: Employ Medpalm 2, a specialized LLM for medical queries, to generate responses to medical
-questions. Enhance its effectiveness through few-shot prompting, incorporating 5-8 ideal medical responses as templates for generating
+Medpalm 2 for Medical Query Generation: Employ Medpalm 2, a specialized LLM for medical queries, to generate responses to medical questions. Enhance its effectiveness through few-shot prompting, incorporating 5-8 ideal medical responses as templates for generating
 accurate and contextually relevant medical advice.
 
-Translation Layer with GPT-4: Before processing queries with Medpalm 2 or the retrieval-augmented generation system, implement a translation
-layer using GPT-4 to ensure that messages in any language can be accurately translated and understood, broadening the system’s
+Translation Layer with GPT-4: Before processing queries with Medpalm 2 or the retrieval-augmented generation system, implement a translation layer using GPT-4 to ensure that messages in any language can be accurately translated and understood, broadening the system’s
 accessibility to non-English speakers.
 
 ### Technical Stack and Tools:
@@ -56,6 +54,51 @@ Dependence on High-Quality Data: The effectiveness of the system heavily relies 
 
 Example UI for response Generation:
 ![Example for response](img/Untitled 1.png)
+
+
+
+
+**API Endpoints**
+
+- **Medical Query API Endpoint:**
+
+  - Endpoint: `/medical_query`
+  - Method: POST
+  - Description: Retrieves the final medical response along with the top sources (excludes Medpalm data).
+
+    ```jsx
+    {
+      "query": "User's medical query"
+    }
+    ```
+
+  - Response Payload:
+
+    ```jsx
+    {
+      "final_answer": "The translated final answer",
+      "top_sources": ["Top source 1", "Top source 2", "Top source 3"]
+    }
+    ```
+
+- **Feedback API Endpoint:**
+
+  - Endpoint: `/feedback`
+  - Method: POST
+  - Description: Manages user feedback, capturing their rating, comments, and suggestions for the ideal answer.
+
+    ```jsx
+    {
+      "query": "User's original query",
+      "answer": "Translated final answer",
+      "feedback": "👍 or 👎",
+      "comments": "Optional comments",
+      "ideal_answer": "Optional suggestion for the ideal answer"
+    }
+    ```
+
+  - Response: Indicates the operation's success or failure with an HTTP status code.
+
 
 
 
