@@ -1,10 +1,99 @@
 # Evaluation
 
-Testing Procedure:
+In this section we deswcribge how we will be evaluating our intent recognition system.
 
-- Testing protocols
-- Feedback mechanisms
-- Iterative improvement process
-- Quality Assurance (Evals)
-- User Acceptance Testing
+The broad components that we test in our intent recognition system are shown in the diagram below:
 
+![Evaluation Framework for Intent Recognition System](img/Evaluation_framework.jpg)
+
+### 1. Prompt
+The first variable in the system is the prompt that we pass to the LLM. We version control the prompts and proceed with the prompt for which we get the best results based on macro F1 score.
+
+Currently our prompt versions look like as follows:
+
+Version 1:
+```
+Judge the intent of the text input from the following options:
+
+"Acknowledgement",
+"Medical",
+"Language change request",
+"Greeting",
+"Spam",
+"Other"
+```
+
+Version 2:
+```
+Classify the Given user's message into one of 6 categories.
+1. Acknowledgement,
+2. Medical,
+3. Language change request,
+4. Greeting,
+5. Spam,
+6. Other
+
+The input message can be in any language. If the language is not english, translate it to english and classify.
+
+{few_shots}
+
+Only output the category
+```
+
+Version 3:
+```
+Classify the user's message into one of 6 categories.
+1. Acknowledgement,
+2. Medical,
+3. Language change request,
+4. Greeting,
+5. Spam,
+6. Other
+
+If the language is not english, translate it to english and classify.
+
+{few_shots}
+
+Don't explain and only return the category as given above
+```
+
+Version 4:
+```
+Classify the user's message into one of 6 categories.
+1. Acknowledgement,
+2. Medical,
+3. Language change request,
+4. Greeting,
+5. Spam,
+6. Other
+
+If the language is not english, translate it to english and classify.
+
+Don't explain and only return the category as given abov
+```
+### 2. Large Language Model
+We are currently experimenting between GPT-3.5 and GPT-4 and based on our multilingual performance and the cost, we will make a decision of which model fits our use-case the best
+
+### 3. User Query
+This is the message sent by the user to our platform and we use this during our qualitative evaluations
+
+### 4. Predicted Intent
+This is the output of the GPT model given the prompt and the user message as the input
+
+### 5. Ground-truth Intent
+This is the ground-truth intent based on the dataset we have and has been annotated by our in-house Medical Support Executive team
+
+### 6. Comparison
+This is a boolean comparison between the predicted intent and the ground-truth intent
+
+### 7. Evaluation Metrics
+We use the Macro F1 score to compare between the various models and prompts. Further, we analyse the results using confusion matrices to determine the false positives and false negatives to get a stronger sense of our model performance.
+
+## Production Test
+While the strategy mentioned in the above mentioned framework is a generic testing methodology, as we progress with our deployment, every month, we will be conducting a ground truth exercise where we will not pass the user message through the automatic classification layer and get the ground truth data to measure the performance of the model at a regular interval. We are working on a Standard Operating Procedure regarding this policy
+
+## Continuous Improvement
+Based on our production test results, we will carry out internal tests to further improve our intent recognition system with improved prompt quality or test other off-the-shelf LLMs and observe how they perform with our dataset.
+
+## Qualitative Evaluation
+We will also be conducting a qualitative study to understand the benefits and challenges faced by the Medical Support Executives in transitioning to AI-based classification tools
