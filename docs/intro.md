@@ -37,6 +37,7 @@ Universal usage: All users irrespective of the technology they use (smartphone o
 
 ### About the Project
 
-This is a project by Noora Health. This has two main components: an intent-recognition system and an assistant platform for the medical support executives to provide health information to the patients/caregivers.
+
+> This website has two main components: a detailed documentation on two systems, (a) intent-recognition system and (b) an assistant platform for the medical support executives to provide health information for patient/caregivers.
 
 <!-- [![Impact at a glance](./img/impact.jpg)](@impact.jpg) -->

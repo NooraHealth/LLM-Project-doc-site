@@ -57,6 +57,51 @@ Example UI for response Generation:
 
 
 
+
+**API Endpoints**
+
+- **Medical Query API Endpoint:**
+
+  - Endpoint: `/medical_query`
+  - Method: POST
+  - Description: Retrieves the final medical response along with the top sources (excludes Medpalm data).
+
+    ```jsx
+    {
+      "query": "User's medical query"
+    }
+    ```
+
+  - Response Payload:
+
+    ```jsx
+    {
+      "final_answer": "The translated final answer",
+      "top_sources": ["Top source 1", "Top source 2", "Top source 3"]
+    }
+    ```
+
+- **Feedback API Endpoint:**
+
+  - Endpoint: `/feedback`
+  - Method: POST
+  - Description: Manages user feedback, capturing their rating, comments, and suggestions for the ideal answer.
+
+    ```jsx
+    {
+      "query": "User's original query",
+      "answer": "Translated final answer",
+      "feedback": "👍 or 👎",
+      "comments": "Optional comments",
+      "ideal_answer": "Optional suggestion for the ideal answer"
+    }
+    ```
+
+  - Response: Indicates the operation's success or failure with an HTTP status code.
+
+
+
+
 <!-- ![Untitled](Development%20fb8a0e36b4084bab8b4e85a7bbbe48c2/Untitled%201.png) -->
 
 Example Ui for Feedback collection:
