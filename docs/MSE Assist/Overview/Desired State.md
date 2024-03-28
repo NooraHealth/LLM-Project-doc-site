@@ -6,7 +6,9 @@ For the desired state, we envision The AI copilot assisting the MSE to perform a
 
 The eventual desired state consists of the following key functions:
 
-#### Curated FAQs 
+![Untitled](img/image2.png)
+
+### Minimising Wait-times through Curated FAQs 
 
 To improve the efficiency and user satisfaction during periods of wait, we aim to implement a feature that automatically presents patient caregivers with a curated list of frequently asked questions and their corresponding answers relevant to their medical inquiries.
 
@@ -40,19 +42,31 @@ If the input and output languages are specified, we aim to utilise AI 4 Bharat's
 
 ### Feedback Mechanism
 
-- **Interface:** Introduce a feedback mechanism post-answer with options for thumbs up (👍) or thumbs down (👎) and an optional text box for comments.
-- **Process:** Store feedback with the query, its translation, and the response to analyze performance and make improvements.
+#### Interface
 
-  - Include a feature that allows users to specify their expected answer in a textbox when the response is insufficient or incorrect.
+Introduce a feedback mechanism post-answer with options for thumbs up (👍) or thumbs down (👎) and an optional text box for comments.
+
+#### Process
+
+- Store feedback with the query, its translation, and the response to analyze performance and make improvements.
+
+- Include a feature that allows users to specify their expected answer in a textbox when the response is insufficient or incorrect.
 
 ### Logging System
 
-- **Query Logging:** Document the original query, its detected language, and the translated query. Log both the original and translated responses.
-- **Retrieval and Response:** Keep records of the top sources, the summarized answer, and its translation.
+#### Query Logging
 
-- **Feedback:** Record user feedback (rating and comments) alongside the related query and response.
+Document the original query, its detected language, and the translated query. Log both the original and translated responses.
 
-![Untitled](img/image2.png)
+#### Retrieval and Response
+
+Keep records of the top sources, the summarized answer, and its translation.
+
+#### Feedback
+
+Record user feedback (rating and comments) alongside the related query and response.
+
+
 ![Untitled](img/image1.png)
 ![Untitled](img/image3.png)
 

@@ -1,6 +1,6 @@
-### Design Principles
+## Design Principles
 
-#### Minimizing Context Switching
+### Minimizing Context Switching
 In the context of medical support executives (MSEs), minimizing context switching means reducing the need for MSEs to switch between different tasks or topics while handling support tickets. This is important for several reasons:
 
 Maintaining Focus and Quality: Context switching can lead to cognitive overload and reduce the MSE's ability to focus on the task at hand. By minimizing context switching, MSEs can maintain their focus and ensure the quality of their work remains high.
@@ -11,7 +11,7 @@ Reducing Errors: Context switching increases the likelihood of errors, as it's e
 
 To implement this principle, the assistant can provide MSEs with a streamlined interface that allows them to handle support tickets without unnecessary distractions or interruptions. Additionally, grouping similar tasks together and providing relevant information within the same context can help minimize the need for context switching.
 
-#### Ensuring Quick Responses
+### Ensuring Quick Responses
 Quick responses are essential for providing timely support to users and ensuring a positive user experience. In the context of medical support, quick responses can have several benefits:
 
 Improved Patient Care: Timely responses to medical queries can lead to improved patient outcomes by providing timely advice or assistance.
@@ -21,16 +21,3 @@ Enhanced User Satisfaction: Users expect prompt responses when seeking medical s
 Reduced Turnaround Time: Quick responses help reduce the overall turnaround time for resolving support tickets, which is important for meeting service level agreements (SLAs) and optimizing the efficiency of support operations.
 
 To achieve quick responses, the assistant can leverage LLMs to generate automated responses to common queries or provide suggestions to MSEs to speed up their response times. 
-
-### Figma files and other
-resources
-
-### Journey Maps
-
-Overview (to be added) ### List of all user tests
-
-List of tests so far (database)
-
-### Known unknowns
-
-List of all assumptions so far (database)
