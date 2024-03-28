@@ -21,7 +21,7 @@ If an answer is found, it’s prepared to be sent to the
   user. If not, the MSE proceeds to the next step.
 
 #### Tools/Systems Used 
-Internal FAQ bank or knowledge base.
+Medical archive (Internal FAQ Bank)
 
 ### Translation and Escalation for Unanswered Questions
 
