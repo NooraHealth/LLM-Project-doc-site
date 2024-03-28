@@ -12,6 +12,7 @@ the messages in the initial stages and get feedback.
 processing with the need for real-time response.
 - Inaccurate translation leading to wrong medical answers -> MSEs
 will flag this and provide a feedback
+- Evaluation gets into an infinite regress: How do we evaluate the evaluation?
 
 ### Risks
 
