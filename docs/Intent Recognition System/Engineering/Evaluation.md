@@ -8,9 +8,12 @@ The broad components that we test in our intent recognition system are shown in 
 
 | Label     | Description |
 | ----------- | ----------- |
-| Predicted Intent     | Intent as predicted by the LLM |
+| User query | This is the message sent by the user to our platform and we use this during our qualitative evaluations|
+| Predicted Intent     | This is the output of the GPT model given the prompt and the user message as the input |
 | Prompt  | The instruction given to the LLM to execute  |
-| Ground-truth Intent  | The intent classified as ground-truth |
+| Ground-truth Intent  | This is the ground-truth intent based on the dataset we have and has been annotated by our in-house Medical Support Executive team |
+| Comparison | This is a boolean comparison between the predicted intent and the ground-truth intent|
+
 
 :::note
 A confusion matrix represents the predictive performance of a model on a dataset. For a binary class dataset (which consists of, suppose, “positive” and “negative” classes), a confusion matrix has four essential components: True Positives (TP): Number of samples correctly predicted as “positive.” 
@@ -22,11 +25,11 @@ F1 score is the weighted average of precision and recall. In our analysis, F1 sc
 
 
 ### Prompt
-The first variable in the system is the prompt that we pass to the LLM. We version control the prompts and proceed with the prompt for which we get the best results based on macro F1 score.
+The first variable in the system is the prompt that we pass to the LLM. The prompts are version controlled, revised over time to produce the best results derived from evaluating the macro F1 score.
 
-Currently our prompt versions look like as follows:
+Currently our prompt versions are as follows:
 
-Version 1:
+#### Version 1
 ```
 Judge the intent of the text input from the following options:
 
@@ -38,7 +41,7 @@ Judge the intent of the text input from the following options:
 "Other"
 ```
 
-Version 2:
+#### Version 2
 ```
 Classify the Given user's message into one of 6 categories.
 1. Acknowledgement,
@@ -55,7 +58,7 @@ The input message can be in any language. If the language is not english, transl
 Only output the category
 ```
 
-Version 3:
+#### Version 3
 ```
 Classify the user's message into one of 6 categories.
 1. Acknowledgement,
@@ -72,7 +75,7 @@ If the language is not english, translate it to english and classify.
 Don't explain and only return the category as given above
 ```
 
-Version 4:
+#### Version 4
 ```
 Classify the user's message into one of 6 categories.
 1. Acknowledgement,
@@ -86,22 +89,16 @@ If the language is not english, translate it to english and classify.
 
 Don't explain and only return the category as given abov
 ```
-### 2. Large Language Model
-We are currently experimenting between GPT-3.5 and GPT-4 and based on our multilingual performance and the cost, we will make a decision of which model fits our use-case the best
 
-### 3. User Query
-This is the message sent by the user to our platform and we use this during our qualitative evaluations
+:::note
+To track the changes in the prompts over time, we use Langfuse, an LLM observability tool. Langfuse tracks the versioning of the prompts, including the additions, deletions and modifications to the prompt text. This allows users to see the history of changes made to the prompt over time.
+:::
 
-### 4. Predicted Intent
-This is the output of the GPT model given the prompt and the user message as the input
+### Large Language Model
+We are currently experimenting between GPT-3.5 and GPT-4 and based on our multilingual performance and the cost. A decision on the best model for our use-case is to be taken.
 
-### 5. Ground-truth Intent
-This is the ground-truth intent based on the dataset we have and has been annotated by our in-house Medical Support Executive team
 
-### 6. Comparison
-This is a boolean comparison between the predicted intent and the ground-truth intent
-
-### 7. Evaluation Metrics
+### Evaluation Metrics
 We use the Macro F1 score to compare between the various models and prompts. Further, we analyse the results using confusion matrices to determine the false positives and false negatives to get a stronger sense of our model performance.
 
 ## Production Test
