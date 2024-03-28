@@ -23,7 +23,7 @@ If an answer is found, it’s prepared to be sent to the
 #### Tools/Systems Used 
 Medical archive (Internal FAQ Bank)
 
-### Translation and Escalation for Unanswered Questions
+### Escalation for Unanswered Questions
 
 | Step    | Description |
 | ----------- | ----------- |
@@ -32,6 +32,12 @@ Medical archive (Internal FAQ Bank)
 | Doctor escalation| Once translated, the query is escalated to a doctor for a professional medical response. |
 | Waiting for response | The MSE waits for the doctor’s response, monitoring the ticket status |
 | Translation of doctor's response | Upon receiving a response, the MSE raises another request to translate the doctor’s response back into the user’s language. |
+
+:::info
+
+Translation might not be a necessary step for all requests. For instance, in Bangladesh we don't have a step for translation of the requests, as the responses are collected in the same language format. However, we have a back-translation loop in place for documentation as well as inputting it to the LLM for embeddings.
+
+:::
 
 #### Outcome
 The translated response is sent back to the user, resolving their query.
