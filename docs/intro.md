@@ -6,6 +6,8 @@ sidebar_position: 1
 
 Noora Health is committed to filling the critical gap in patient caregiver training and support, treating family members as indispensable caregivers and equipping them with essential skills. Our scalable program integrates with existing healthcare systems, delivering key care knowledge through in-person training sessions and mobile-based follow-up messaging. Active in India, Bangladesh, and Indonesia, Noora Health has educated over 8.4 million caregivers and collaborated with 1000+ health facilities, significantly decreasing complications and readmissions while enhancing care quality. 
 
+![RES](img/res.jpg)
+
 
 ### What do we do?
 
