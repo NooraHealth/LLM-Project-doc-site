@@ -102,7 +102,7 @@ We are currently experimenting between GPT-3.5 and GPT-4 and based on our multil
 We use the Macro F1 score to compare between the various models and prompts. Further, we analyse the results using confusion matrices to determine the false positives and false negatives to get a stronger sense of our model performance.
 
 ## Production Test
-While the strategy mentioned in the above mentioned framework is a generic testing methodology, as we progress with our deployment, every month, we will be conducting a ground truth exercise where we will not pass the user message through the automatic classification layer and get the ground truth data to measure the performance of the model at a regular interval. We are working on a Standard Operating Procedure regarding this policy
+While the overall strategy mentioned above is a generic testing methodology, as we progress with our deployment, we are aiming to conduct monthly ground-truth exercises. This is aimed at measuring the ground-truth data overriding the automatic classification layer, and using this as a mechanism to measure the overall performance of the model. Once streamlined, this gets standardised as a standard operating procedure.
 
 ## Continuous Improvement
 Based on our production test results, we will carry out internal tests to further improve our intent recognition system with improved prompt quality or test other off-the-shelf LLMs and observe how they perform with our dataset.
