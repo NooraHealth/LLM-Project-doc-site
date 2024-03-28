@@ -1,12 +1,27 @@
 # Evaluation
 
-In this section we deswcribge how we will be evaluating our intent recognition system.
+In this section we desribe our approach of evaluation of the Intent Recognition System.
 
 The broad components that we test in our intent recognition system are shown in the diagram below:
 
 ![Evaluation Framework for Intent Recognition System](img/Evaluation_framework.jpg)
 
-### 1. Prompt
+| Label     | Description |
+| ----------- | ----------- |
+| Predicted Intent     | Intent as predicted by the LLM |
+| Prompt  | The instruction given to the LLM to execute  |
+| Ground-truth Intent  | The intent classified as ground-truth |
+
+:::note
+A confusion matrix represents the predictive performance of a model on a dataset. For a binary class dataset (which consists of, suppose, “positive” and “negative” classes), a confusion matrix has four essential components: True Positives (TP): Number of samples correctly predicted as “positive.” 
+:::
+
+:::note
+F1 score is the weighted average of precision and recall. In our analysis, F1 score is more useful than accuracy since the cost of false positives and false negatives are very different.
+:::
+
+
+### Prompt
 The first variable in the system is the prompt that we pass to the LLM. We version control the prompts and proceed with the prompt for which we get the best results based on macro F1 score.
 
 Currently our prompt versions look like as follows:
