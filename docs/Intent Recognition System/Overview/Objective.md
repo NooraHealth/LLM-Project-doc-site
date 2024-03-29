@@ -9,6 +9,4 @@ We aim to leverage generative-AI to auto-respond to generic messages that come u
 In this way, the MSEs could focus their time and energy on what they do best: to answer medical queries, with empathy.
 
 
-![Varied type of questions received by the MSE](img/irs.jpg)
-
 
