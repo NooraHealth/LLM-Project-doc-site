@@ -32,7 +32,7 @@ After identifying the non-medical intent in-terms of these broad categories, an 
 
 ### Ticket Creation
 
-In the future state, we expect a more seamless ticket creation process for medical queries. MSE no longer needs to manually log the query onto the ticketing platform. 
+In the future state, we expect a more seamless ticket creation [process for medical queries](docs/Intent%20Recognition%20System/References/Bibliography.md). MSE no longer needs to manually log the query onto the ticketing platform. 
 
 The current process of manual ticket creation for medical messages would be redacted once we evaluate the accuracy of this system.
 
